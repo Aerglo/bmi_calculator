@@ -11,28 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: 'LoadingPage',
+      initialRoute: 'darkModePage',
       routes: {
-        'LoadingPage': (context) => const HomeScreen(),
         'darkModePage': (context) => const DarkMode(),
         'lightModePage': (context) => const LightMode(),
       },
       debugShowCheckedModeBanner: false,
     );
-  }
-}
-
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  @override
-  Widget build(BuildContext context) {
-    return const DarkMode();
   }
 }
 
